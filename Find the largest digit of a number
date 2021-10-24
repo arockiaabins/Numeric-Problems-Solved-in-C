@@ -1,0 +1,28 @@
+// Find the largest digit
+//input: number = 8976
+//output: largest = 9
+
+#include<stdio.h>
+
+int main()
+{
+	int number, largest=0, reminder=0;
+	
+	printf("Enter a number:");
+	scanf("%d", &number);
+	
+	while( number != 0)
+	{
+		reminder = number % 10;
+		number = number / 10;
+		
+		if(reminder > largest)
+		{
+			largest = reminder;
+		}
+	}
+	
+	printf("The largest digit of a number:%d", largest);
+	
+	return 0;
+}
