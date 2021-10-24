@@ -1,0 +1,23 @@
+// Find count of digits in a number
+// input: number = 1234
+// Outpuyt: digits = 4
+
+#include<stdio.h>
+
+int main()
+{
+	int number, c = 0;
+	
+	printf("Enter a number:");
+	scanf("%d",&number);
+	
+	while(number != 0)
+	{
+		number = number / 10;
+		c++;
+	}
+	
+	printf("Number of digits in an number:%d", c);
+	
+	return 0;
+}
