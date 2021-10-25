@@ -1,0 +1,40 @@
+//Find 2nd largest digit of a number
+// input: number = 1234
+// output: Second largest digit = 3
+
+
+#include<stdio.h>
+
+int main()
+{
+	int number, largest=0, sec_largest = 0, reminder = 0;
+	
+	printf("Enter a positive number:");
+	scanf("%d", &number);
+	
+	while(number != 0)
+	{
+		reminder = number % 10;
+		
+		if ( reminder > largest)
+		{
+			if ( largest > sec_largest)
+			{
+				sec_largest = largest;
+			}
+			
+			largest = reminder;
+		}
+		else if(largest > reminder && sec_largest < reminder)
+		{
+				sec_largest = reminder;
+		}
+		
+		number = number / 10;
+	}
+	
+	printf("Second largest digit of a Number:%d", sec_largest);
+	
+	return 0;
+}
+
