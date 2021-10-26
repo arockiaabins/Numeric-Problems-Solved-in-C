@@ -1,0 +1,29 @@
+//Find the smallesr digit of a number
+//input: number = 6872
+//output: digit = 2
+
+#include<stdio.h>
+
+int main()
+{
+	int number, smallest = 9, reminder = 0;
+	
+	printf("Enter a number:");
+	scanf("%d", &number);
+	
+	while (number != 0)
+	{
+		reminder = number % 10;
+		
+		if(reminder < smallest)
+		{
+			smallest = reminder;
+		}
+		
+		number = number / 10;
+	}
+	
+	printf("Smallest digit of a number: %d", smallest);
+	
+	return 0;
+}
